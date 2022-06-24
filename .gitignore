@@ -1,5 +1,15 @@
 # build this file with help from https://github.com/github/gitignore
 
+ta-lib/c/include/ta_config.h
+
+# from .cvsignore 
+tools/tmake.exe
+tools/p2xdll.dll
+
+ta-lib/c/bin/
+#ta_lib/c/temp
+ta_lib/c/lib
+
 # http://www.gnu.org/software/automake
 Makefile.in
 /ar-lib
@@ -184,6 +194,9 @@ venv.bak/
 
 # Rope project settings
 .ropeproject
+
+# VSCode project
+.vscode/
 
 # mkdocs documentation
 /site
