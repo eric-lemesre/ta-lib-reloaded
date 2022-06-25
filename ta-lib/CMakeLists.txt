@@ -13,6 +13,17 @@ IF(TA_LIB_VERSION_EXTRA)
 	SET(TA_LIB_VERSION_FULL "${TA_LIB_VERSION_FULL}-${TA_LIB_VERSION_EXTRA}")
 ENDIF(TA_LIB_VERSION_EXTRA)
 
+OPTION(TA_LIB_ENABLE_C "Enable C library" ON)
+OPTION(TA_LIB_ENABLE_GEN_CODE "Enable the gen_code utility (only needed by when adding new functions to the Ta-Lib)" OFF)
+OPTION(TA_LIB_ENABLE_DOTNET "Enable .NET bindings" OFF)
+OPTION(TA_LIB_ENABLE_EXCEL "Enable Excel bindings" OFF)
+OPTION(TA_LIB_ENABLE_JAVA "Enable Java bindings" OFF)
+OPTION(TA_LIB_ENABLE_SWIG "Enable SWIG bindings" OFF)
+OPTION(TA_LIB_ENABLE_TESTS "Enable tests building" ON)
+
+# Packaging 
+INCLUDE(CPack)
+
 set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
 set(CPACK_SOURCE_IGNORE_FILES)
 set(CPACK_PACKAGE_VERSION_MAJOR ${TA_LIB_VERSION_MAJOR})
@@ -21,19 +32,11 @@ set(CPACK_PACKAGE_VERSION_BUILD ${TA_LIB_VERSION_BUILD})
 SET(CPACK_PACKAGE_VERSION_EXTRA ${TA_LIB_VERSION_EXTRA})
 set(CPACK_SOURCE_PACKAGE_FILE_NAME "${PROJECT_NAME}-src-${TA_LIB_VERSION_FULL}")
 
-OPTION(TA_LIB_ENABLE_C "Enable C library" ON)
-OPTION(TA_LIB_ENABLE_GEN_CODE "Enable the gen_code utility (only needed by when adding new functions to the Ta-Lib)" OFF)
-OPTION(TA_LIB_ENABLE_DOTNET "Enable .NET bindings" OFF)
-OPTION(TA_LIB_ENABLE_EXCEL "Enable Excel bindings" OFF)
-OPTION(TA_LIB_ENABLE_JAVA "Enable Java bindings" OFF)
-OPTION(TA_LIB_ENABLE_SWIG "Enable SWIG bindings" OFF)
-OPTION(TA_LIB_ENABLE_TESTS "Enable tests building" OFF)
-
 set(CPACK_SOURCE_GENERATOR "TGZ;ZIP")
 set(CPACK_GENERATOR "TGZ;ZIP")
-set(CPACK_SOURCE_IGNORE_FILES "/CVS/;/\\.svn/;\\.git/;temp/;\\.swp$;\\.#;/#;.*~;cscope.*")
+set(CPACK_SOURCE_IGNORE_FILES "/CVS/;/.svn/;.git/;temp/;.swp$;.#;/#;.*~;cscope.*")
+set(CPACK_INCLUDE_TOPLEVEL_DIRECTORY FALSE)
 
-INCLUDE(CPack)
 INCLUDE(CheckIncludeFiles)
 INCLUDE(CheckFunctionExists)
 INCLUDE(CheckTypeSize)
@@ -86,9 +89,6 @@ CHECK_SYMBOL_EXISTS("struct tm" "sys/time.h" TM_IN_SYS_TIME)
 CONFIGURE_FILE(${ta-lib_SOURCE_DIR}/c/include/ta_config.h.cmake ${ta-lib_SOURCE_DIR}/c/include/ta_config.h)
 
 
-
-
-
 IF(TA_LIB_ENABLE_C)
 	ADD_SUBDIRECTORY(c)
 ENDIF(TA_LIB_ENABLE_C)
@@ -97,7 +97,7 @@ IF(TA_LIB_ENABLE_DOTNET)
 	MESSAGE(SEND_ERROR "Not yet implemented")
 	IF(!WIN32)
 		MESSAGE(SEND_ERROR ".NET bindings can be generated only onder Windows at the times")
-	ENDIF(WIN32)
+	ENDIF(!WIN32)
 	ADD_SUBDIRECTORY(dotnet)
 ENDIF(TA_LIB_ENABLE_DOTNET)
 
@@ -114,7 +114,11 @@ IF(TA_LIB_ENABLE_SWIG)
 ENDIF(TA_LIB_ENABLE_SWIG)
 
 IF(TA_LIB_ENABLE_TESTS)
-	MESSAGE(SEND_ERROR "Not yet implemented")
+#	MESSAGE(SEND_ERROR "implementation in pogress")
+	include(CTest)
+	ADD_SUBDIRECTORY(c/src/tools/ta_regtest)
+	enable_testing()
+	add_test(NAME ta_regtest COMMAND ${ta-lib_BINARY_DIR}/bin/ta_regtest)
 ENDIF(TA_LIB_ENABLE_TESTS)
 
 IF(TA_LIB_ENABLE_GEN_CODE)

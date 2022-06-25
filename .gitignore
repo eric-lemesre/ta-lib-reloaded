@@ -9,6 +9,11 @@ tools/p2xdll.dll
 ta-lib/c/bin/
 #ta_lib/c/temp
 ta_lib/c/lib
+ta-lib/swig/lib/python/*.*
+ta-lib/swig/temp/perl/wrap/*.c 
+ta-lib/swig/temp/perl/wrap/*.py 
+ta-lib/swig/temp/python/wrap/*.c
+ta-lib/swig/temp/python/wrap/*.py
 
 # http://www.gnu.org/software/automake
 Makefile.in
