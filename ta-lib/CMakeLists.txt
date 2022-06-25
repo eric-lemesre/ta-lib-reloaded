@@ -14,7 +14,7 @@ IF(TA_LIB_VERSION_EXTRA)
 ENDIF(TA_LIB_VERSION_EXTRA)
 
 OPTION(TA_LIB_ENABLE_C "Enable C library" ON)
-OPTION(TA_LIB_ENABLE_GEN_CODE "Enable the gen_code utility (only needed by when adding new functions to the Ta-Lib)" OFF)
+OPTION(TA_LIB_ENABLE_GEN_CODE "Enable the gen_code utility (only needed by when adding new functions to the Ta-Lib)" ON)
 OPTION(TA_LIB_ENABLE_DOTNET "Enable .NET bindings" OFF)
 OPTION(TA_LIB_ENABLE_EXCEL "Enable Excel bindings" OFF)
 OPTION(TA_LIB_ENABLE_JAVA "Enable Java bindings" OFF)
@@ -122,6 +122,7 @@ IF(TA_LIB_ENABLE_TESTS)
 ENDIF(TA_LIB_ENABLE_TESTS)
 
 IF(TA_LIB_ENABLE_GEN_CODE)
-	MESSAGE(SEND_ERROR "Not yet implemented")
+#	MESSAGE(SEND_ERROR "Not yet implemented")
+	ADD_SUBDIRECTORY(c/src/tools/gen_code)	
 ENDIF(TA_LIB_ENABLE_GEN_CODE)
 
