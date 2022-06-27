@@ -18,7 +18,7 @@ OPTION(TA_LIB_ENABLE_GEN_CODE "Enable the gen_code utility (only needed by when 
 OPTION(TA_LIB_ENABLE_DOTNET "Enable .NET bindings" OFF)
 OPTION(TA_LIB_ENABLE_EXCEL "Enable Excel bindings" OFF)
 OPTION(TA_LIB_ENABLE_JAVA "Enable Java bindings" OFF)
-OPTION(TA_LIB_ENABLE_SWIG "Enable SWIG bindings" OFF)
+OPTION(TA_LIB_ENABLE_SWIG "Enable SWIG bindings" ON)
 OPTION(TA_LIB_ENABLE_TESTS "Enable tests building" ON)
 
 # Packaging 
