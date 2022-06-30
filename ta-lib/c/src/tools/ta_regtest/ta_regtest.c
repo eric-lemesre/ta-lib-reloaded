@@ -258,7 +258,6 @@ static ErrorNumber testTAFunction_ALL( void )
    DO_TEST( test_func_per_hlc,  "CCI,WILLR,ULTOSC,NATR" );
    DO_TEST( test_func_per_ohlc, "BOP,AVGPRICE" );
    DO_TEST( test_func_rsi,      "RSI,CMO" );
-   DO_TEST( test_func_imi, "IMI" );
    DO_TEST( test_func_minmax,   "MIN,MAX,MININDEX,MAXINDEX,MINMAX,MINMAXINDEX" );
    DO_TEST( test_func_po,       "PO,APO" );
    DO_TEST( test_func_adx,      "ADX,ADXR,DI,DM,DX" );
@@ -274,6 +273,7 @@ static ErrorNumber testTAFunction_ALL( void )
    DO_TEST( test_func_avgdev,   "AVGDEV" );
    DO_TEST( test_func_bbands,   "BBANDS" );
    DO_TEST( test_candlestick,   "All Candlesticks" );
+   //   DO_TEST( test_func_imi,      "IMI" );
 
    return TA_TEST_PASS; /* All tests succeeded. */
 }
