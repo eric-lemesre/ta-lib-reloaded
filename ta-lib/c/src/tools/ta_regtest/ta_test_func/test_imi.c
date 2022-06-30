@@ -47,7 +47,7 @@
  */
 
 /* Description:
- *     Test AVGDEV function.
+ *     Test IMI function.
  */
 
 /**** Headers ****/
@@ -104,7 +104,7 @@ static ErrorNumber do_test( const TA_History *history,
 static TA_Test tableTest[] =
 {
    /*************************/
-   /*      AVGDEV TEST      */
+   /*      IMI TEST      */
    /*************************/
    { 1, 0, 0, 251, 5, TA_SUCCESS,     0, 55.9194,   4,  252-4 }, /* First Value */
    { 0, 0, 0, 251, 5, TA_SUCCESS,     1, 64.6143,   4,  252-4 }, 
