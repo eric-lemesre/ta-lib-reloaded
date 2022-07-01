@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<project name="${PROJECT_NAME}" basedir="${TA_LIB_JAVA_BASEDIR}" default="build">
+	<property name="debug" value="true"/>
+	<property name="dir.src" value="${TA_LIB_JAVA_BASEDIR}/src/"/>
+	<property name="file.jar" value="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}.jar"/>
+	<property name="dir.classes" value="${ta-lib_BINARY_DIR}/java/classes"/>
+	<property name="junit.jar" value="${JUNIT_JAR}"/>
+	<path id="classpath.base">
+		<pathelement location="${TA_LIB_JAVA_BASEDIR}/src/"/>
+		<pathelement location="${JUNIT_JAR}"/>
+	</path>
+	<path id="classpath.test">
+		<pathelement location="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}.jar"/>
+		<pathelement location="${JUNIT_JAR}"/>
+	</path>
+	<target name="test" depends="build">
+		<echo message="Running ${PROJECT_NAME} tests"/>
+		<junit>
+			<classpath refid="classpath.test"/>
+			<formatter type="brief" usefile="false"/>
+			<test name="com.tictactec.ta.lib.test.AllTests"/>
+		</junit>
+	</target>
+	<target name="build" description="Build ta-lib.">
+		<echo message="Building project ${PROJECT_NAME}"/>
+		<mkdir dir="${ta-lib_BINARY_DIR}/java/classes"/>
+		<copy todir="${ta-lib_BINARY_DIR}/java/classes" includeEmptyDirs="false">
+			<fileset dir="${TA_LIB_JAVA_BASEDIR}/src/" excludes="**/*.java"/>
+		</copy>
+		<javac source="${TA_LIB_JAVA_SOURCE_VERSION}" target="${TA_LIB_JAVA_TARGET_VERSION}" 
+			srcdir="${TA_LIB_JAVA_BASEDIR}/src/" 
+			destdir="${ta-lib_BINARY_DIR}/java/classes" 
+			includeantruntime="false"
+			debug="true">
+			<classpath refid="classpath.base"/>
+		</javac>
+		<delete file="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}.jar"/>
+		<jar destfile="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}.jar" basedir="${ta-lib_BINARY_DIR}/java/classes"/>
+		<jar destfile="${ta-lib_BINARY_DIR}/${TA_LIB_JAR_TARGET_NAME}-test.jar" 
+			basedir="${TA_LIB_JAVA_BASEDIR}/src/" excludes="com/**/*.class"/>
+		<jar destfile="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}-sources.jar" 
+			basedir="${TA_LIB_JAVA_BASEDIR}/src" excludes="**/*.class"/>
+	</target>
+	<target name="clean" description="clean up all generated files.">
+		<echo message="Cleaning up project ${PROJECT_NAME}"/>
+		<delete dir="${ta-lib_BINARY_DIR}/java/classes"/>
+		<delete file="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}.jar"/>
+		<delete file="${ta-lib_BINARY_DIR}/${TA_LIB_JAR_TARGET_NAME}-test.jar"/>
+		<delete file="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}-sources.jar"/>
+	</target>
+</project>
