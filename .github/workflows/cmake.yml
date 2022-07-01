@@ -1,0 +1,86 @@
+name: CMake
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Debug
+
+jobs:
+  build:
+    # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
+    # You can convert this to a matrix build if you need cross-platform coverage.
+    # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Swig install
+      run: sudo apt install -y swig
+      
+    - name: Setup Java JDK
+      uses: actions/setup-java@v3.4.0
+      with:
+        # The Java version to set up.
+        # - major versions: 8, 11, 16, 17
+        # - more specific versions: 17.0, 11.0, 11.0.4, 8.0.232, 8.0.282+8
+        # - early access (EA) versions: 15-ea, 15.0.0-ea, 15.0.0-ea.2, 15.0.0+2-ea
+        # Takes a whole or semver Java version. See examples of supported syntax in README file
+        java-version: 8
+        # Java distribution. 
+        # - temurin,       https://adoptium.net/
+        # - zulu,          https://www.azul.com/downloads/zulu-community/?package=jdk
+        # - adopt-hotspot, https://adoptopenjdk.net/ 
+        # - adopt-openj9,  https://adoptopenjdk.net/
+        # - liberica,      https://bell-sw.com/
+        # - microsoft,     https://www.microsoft.com/openjdk
+        # - corretto       https://aws.amazon.com/corretto/
+        # See the list of supported distributions in README file
+        distribution: temurin
+        # The package type (jdk, jre, jdk+fx, jre+fx)
+        java-package: jdk
+        # The architecture of the package
+        architecture: x64
+        # Path to where the compressed JDK is located
+        #jdkFile: # optional
+        # Set this option if you want the action to check for the latest available version that satisfies the version spec
+        #check-latest: # optional
+        # ID of the distributionManagement repository in the pom.xml file. Default is `github`
+        server-id: github
+        # Environment variable name for the username for authentication to the Apache Maven repository. Default is $GITHUB_ACTOR
+        server-username: GITHUB_ACTOR
+        # Environment variable name for password or token for authentication to the Apache Maven repository. Default is $GITHUB_TOKEN
+        server-password: GITHUB_TOKEN
+        # Path to where the settings.xml file will be written. Default is ~/.m2.
+        settings-path: ~/.m2
+        # Overwrite the settings.xml file if it exists. Default is "true".
+        overwrite-settings: true
+        # GPG private key to import. Default is empty string.
+        #gpg-private-key: # optional
+        # Environment variable name for the GPG private key passphrase. Default is $GPG_PASSPHRASE.
+        #gpg-passphrase: # optional
+        # Name of the build platform to cache dependencies. It can be "maven", "gradle" or "sbt".
+        #cache: # optional
+        # Workaround to pass job status to post job step. This variable is not intended for manual setting
+        #job-status: # optional, default is ${{ job.status }} 
+        
+    - name: Configure CMake
+          # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
+          # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+
+    - name: Build
+      # Build your program with the given configuration
+      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+
+    - name: Test
+      working-directory: ${{github.workspace}}/build
+      # Execute tests defined by the CMake configuration.  
+      # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
+      run: ctest -C ${{env.BUILD_TYPE}}
+      
