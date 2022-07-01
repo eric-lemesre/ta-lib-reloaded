@@ -15,6 +15,8 @@ ta-lib/swig/temp/perl/wrap/*.py
 ta-lib/swig/temp/python/wrap/*.c
 ta-lib/swig/temp/python/wrap/*.py
 
+ta-lib/java/classes/
+ta-lib/java/.settings/
 
 # http://www.gnu.org/software/automake
 Makefile.in
@@ -80,8 +82,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
 parts/
 sdist/
 var/
