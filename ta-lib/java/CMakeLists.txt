@@ -33,3 +33,7 @@ ADD_CUSTOM_COMMAND(
     WORKING_DIRECTORY ${ta-lib_BINARY_DIR}
 )
 
+IF(TA_LIB_ENABLE_TESTS)
+    set(TA_LIB_CLASSPATH_TEST "${ta-lib_BINARY_DIR}/${TA_LIB_JAR_TARGET_NAME}-test.jar:${JUNIT_JAR}:${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}.jar")
+    add_test(NAME ta-lib_jar COMMAND ${Java_JAVA_EXECUTABLE} -cp ${TA_LIB_CLASSPATH_TEST} com.tictactec.ta.lib.test.AllTests)
+ENDIF(TA_LIB_ENABLE_TESTS)

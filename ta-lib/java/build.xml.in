@@ -36,6 +36,8 @@
 		</javac>
 		<delete file="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}.jar"/>
 		<jar destfile="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}.jar" basedir="${ta-lib_BINARY_DIR}/java/classes"/>
+		<jar destfile="${ta-lib_BINARY_DIR}/${TA_LIB_JAR_TARGET_NAME}-test.jar" 
+			basedir="${TA_LIB_JAVA_BASEDIR}/src/" excludes="com/**/*.class"/>
 		<jar destfile="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}-sources.jar" 
 			basedir="${TA_LIB_JAVA_BASEDIR}/src" excludes="**/*.class"/>
 	</target>
@@ -43,5 +45,7 @@
 		<echo message="Cleaning up project ${PROJECT_NAME}"/>
 		<delete dir="${ta-lib_BINARY_DIR}/java/classes"/>
 		<delete file="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}.jar"/>
+		<delete file="${ta-lib_BINARY_DIR}/${TA_LIB_JAR_TARGET_NAME}-test.jar"/>
+		<delete file="${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}-sources.jar"/>
 	</target>
 </project>
