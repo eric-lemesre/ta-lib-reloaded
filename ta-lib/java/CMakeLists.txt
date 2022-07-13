@@ -2,7 +2,8 @@
 include("${ta-lib_SOURCE_DIR}/cmake/OpenCVDetectApacheAnt.cmake")
 
 find_jar(JUNIT_JAR NAMES "junit" "junit4"
-    PATHS ${ta-lib_BINARY_DIR})
+    PATHS ${ta-lib_BINARY_DIR}
+    VERSIONS 4.13.1 4.13.2)
 
 IF(NOT JUNIT_JAR)
     SET(MAVEN_REMOTE_REPOS "https://repo1.maven.org/maven2")
