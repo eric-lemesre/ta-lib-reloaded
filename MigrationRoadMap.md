@@ -9,28 +9,28 @@
      * [ ] Build ta-lib library from c source file `ta-lib/c/src/{ta_abstrac,ta_common,ta_func}` [link to source](ta-lib/c/src)
        * [x] Unix shared lib
        * [x] Unix static lib
-       * [ ] Windows dll
+       * [x] Windows dll
        * [ ] Mac OSX shared lib
        * [ ] Mac OSX static lib
      * [ ] Build ta_regtest programme from c source file `ta-lib/c/src/tools/ta_regtest` [link to source](ta-lib/c/src/tools/ta_regtest)
        * [x] on Unix OS
-       * [ ] on Windows OS
+       * [x] on Windows OS
        * [ ] on MacOSX OS
      * [ ] Build gen_code programme from c source file `ta-lib/c/src/tools/gen_code` [link to source](ta-lib/c/src/tools/gen_code)
         * [x] target to Unix OS
-        * [ ] target to Windows OS
+        * [x] target to Windows OS
         * [ ] target to MacOSX OS
      * [ ] Build ta-lib.jar programme from java source file `ta-lib/java` [link to source](ta-lib/java)
-       * with initial `ant` script file 
+       * with initial `ant` script file
           * [x] running on Unix OS
           * [ ] running on Windows OS
           * [ ] running on MacOSX OS
      * [ ] Build SWIG wrapper `ta-lib/swig` [link to source](ta-lib/swig)
-       * for language PERL 
+       * for language PERL
           * [ ] running on Unix OS
           * [ ] running on Windows OS
           * [ ] running on MacOSX OS
-       * for language Python 
+       * for language Python
           * [ ] running on Unix OS
           * [ ] running on Windows OS
           * [ ] running on MacOSX OS
@@ -52,5 +52,5 @@
      * [ ] functional tests java implementation
      * [ ] functional tests swig for PERL
      * [ ] functional tests swig for Python
-     * [ ] functional tests dotnet 
+     * [ ] functional tests dotnet
      * [ ] functional tests Excel
