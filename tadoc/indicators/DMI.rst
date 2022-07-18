@@ -1,13 +1,13 @@
-==================
+================================
 Directional Movement Index (DMI)
-==================
+================================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

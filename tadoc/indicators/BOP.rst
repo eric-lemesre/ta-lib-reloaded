@@ -1,13 +1,13 @@
-==================
+======================
 Balance of Power (BOP)
-==================
+======================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

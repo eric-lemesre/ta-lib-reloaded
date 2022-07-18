@@ -1,13 +1,13 @@
-==================
-Moyennes mobiles simples
-==================
+=====================
+Simple Moving Average
+=====================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

@@ -1,13 +1,13 @@
-==================
+===================
 Chaikin Oscillateur
-==================
+===================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

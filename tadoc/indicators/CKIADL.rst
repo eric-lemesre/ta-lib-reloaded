@@ -1,13 +1,13 @@
-==================
+================
 Chaikin A/D line
-==================
+================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

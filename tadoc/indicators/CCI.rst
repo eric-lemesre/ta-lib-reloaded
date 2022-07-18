@@ -1,13 +1,13 @@
-==================
+=============================
 CCI (Commodity Channel Index)
-==================
+=============================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

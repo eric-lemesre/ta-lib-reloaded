@@ -1,13 +1,13 @@
-==================
+=============================
 Droite de regression linéaire
-==================
+=============================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

@@ -1,13 +1,13 @@
-==================
+================
 Stochastique RSI
-==================
+================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------
