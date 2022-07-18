@@ -3,7 +3,8 @@ Imports the system and the
 theme the project is using to the project.
 """
 
-import sys, os
+import sys
+import os
 import sphinx_bootstrap_theme
 
 """
@@ -26,8 +27,8 @@ extensions = ['xref',
 Imports all link files into project.
 """
 
-from links.link import *
-from links import *
+#from links.link import *
+#from links import *
 
 """
 Tells the project where to look for theme templates and css overrides.
@@ -49,6 +50,8 @@ project = u'TA-Lib : Technical Analysis Library'
 copyright = u'1999, Mario Fortier'
 author = u'Mario Fortier'
 
+release = '@TA_LIB_VERSION_FULL@'
+
 """
 The Google Analytics ID.
 """
@@ -58,7 +61,7 @@ googleanalytics_id = 'UA-88078032-1'
 Tells the project to use sphinx pygments for color coding code examples.
 """
 
-pygments_style = 'sphinx'
+pygments_style = '@SPHINX_THEME@'
 
 """
 Tells the project to include content in todo directives.  Often set through 
@@ -78,6 +81,10 @@ html_theme_options = {
     'source_link_position': "footer",
 }
 
+ -- Options for sphinx-intl example
+
+locale_dirs = ['locale/']   # po files will be created in this directory
+gettext_compact = False     # optional: avoid file concatenation in sub directories.
 
 def setup(app):
     app.add_stylesheet("my-styles.css")
@@ -137,8 +144,8 @@ else:
 # Add RTD Static Path. Add to the end because it overwrites previous files.
 if not 'html_static_path' in globals():
     html_static_path = []
-if os.path.exists('_static'):
-    html_static_path.append('_static')
+if os.path.exists('@CMAKE_CURRENT_SOURCE_DIR@/_static'):
+    html_static_path.append('@CMAKE_CURRENT_SOURCE_DIR@/_static')
 
 # Add RTD Theme only if they aren't overriding it already
 using_rtd_theme = (
@@ -150,8 +157,8 @@ using_rtd_theme = (
         ) or 'html_theme' not in globals()
 )
 if using_rtd_theme:
-    theme = importlib.import_module('sphinx_rtd_theme')
-    html_theme = 'sphinx_rtd_theme'
+    theme = importlib.import_module('@SPHINX_THEME@')
+    html_theme = '@SPHINX_THEME@'
     html_style = None
     html_theme_options = {}
     if 'html_theme_path' in globals():
@@ -187,7 +194,7 @@ context = {
     'canonical_url': 'https://sublime-and-sphinx-guide.readthedocs.io/en/latest/',
     'analytics_code': '',
     'single_version': False,
-    'conf_py_path': '/source/',
+    'conf_py_path': '',
     'api_host': 'https://readthedocs.org',
     'github_user': 'MarkHoeber',
     'proxied_api_host': '/_',

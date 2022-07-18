@@ -16,6 +16,11 @@ set(SPHINX_CACHE_DIR "${CMAKE_CURRENT_BINARY_DIR}/docs/_doctrees")
 # HTML output directory
 set(SPHINX_HTML_DIR "${CMAKE_CURRENT_BINARY_DIR}/docs/html")
 
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/conf.py.in"
+    "${CMAKE_CURRENT_SOURCE_DIR}/conf.py"
+    @ONLY)
+
 set(SPHINX_MASTER "indicator")
 sphinx_add_docs(
   tadoc_sphinx
