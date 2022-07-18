@@ -1,13 +1,13 @@
-==================
+========================
 ATR (Average True Range)
-==================
+========================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

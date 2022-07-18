@@ -1,13 +1,13 @@
-==================
+==========================
 Moyennes mobiles pondérées
-==================
+==========================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

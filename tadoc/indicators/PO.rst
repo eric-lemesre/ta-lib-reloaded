@@ -1,13 +1,13 @@
-==================
+================
 Price Oscillator
-==================
+================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

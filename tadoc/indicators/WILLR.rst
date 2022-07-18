@@ -1,13 +1,13 @@
-==================
+==============
 %R de Williams
-==================
+==============
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

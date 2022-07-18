@@ -1,13 +1,13 @@
-==================
-MM (Moyennes mobiles)
-==================
+===================
+MM (Moving Average)
+===================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

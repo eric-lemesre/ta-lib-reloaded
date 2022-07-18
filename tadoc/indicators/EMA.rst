@@ -1,13 +1,13 @@
-==================
+=====================================
 Moyennes mobiles exponentielles (MME)
-==================
+=====================================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------
