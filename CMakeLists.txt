@@ -20,6 +20,7 @@ OPTION(TA_LIB_ENABLE_EXCEL "Enable Excel bindings" OFF)
 OPTION(TA_LIB_ENABLE_JAVA "Enable Java bindings" ON)
 OPTION(TA_LIB_ENABLE_SWIG "Enable SWIG bindings" OFF)
 OPTION(TA_LIB_ENABLE_TESTS "Enable tests building" ON)
+OPTION(TA_LIB_ENABLE_DOCS "Enable documantations building" OFF)
 
 # Packaging 
 
@@ -36,6 +37,9 @@ SET(CPACK_INCLUDE_TOPLEVEL_DIRECTORY OFF)
 # try to find package befor download it
 SET(FETCHCONTENT_TRY_FIND_PACKAGE_MODE "ALWAYS")
 SET(JAVA_SOURCE_VERSION "1.6")
+
+# difine source dir for CMake modules
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 INCLUDE(CPack)
 INCLUDE(CTest)
@@ -89,11 +93,11 @@ ELSE()
 	SET(size_t "unsigned")
 ENDIF()
 CHECK_SYMBOL_EXISTS("struct tm" "sys/time.h" TM_IN_SYS_TIME)
-CONFIGURE_FILE(${ta-lib_SOURCE_DIR}/c/include/ta_config.h.cmake ${ta-lib_SOURCE_DIR}/c/include/ta_config.h)
+CONFIGURE_FILE(${ta-lib_SOURCE_DIR}/ta-lib/c/include/ta_config.h.cmake ${ta-lib_SOURCE_DIR}/ta-lib/c/include/ta_config.h)
 
 
 IF(TA_LIB_ENABLE_C)
-	ADD_SUBDIRECTORY(c)
+	ADD_SUBDIRECTORY(ta-lib/c)
 ENDIF(TA_LIB_ENABLE_C)
 
 IF(TA_LIB_ENABLE_DOTNET)
@@ -101,7 +105,7 @@ IF(TA_LIB_ENABLE_DOTNET)
 	IF(!WIN32)
 		MESSAGE(SEND_ERROR ".NET bindings can be generated only onder Windows at the times")
 	ENDIF(!WIN32)
-	ADD_SUBDIRECTORY(dotnet)
+	ADD_SUBDIRECTORY(ta-lib/dotnet)
 ELSE()
 	MESSAGE(STATUS "DotNet is disabled")
 ENDIF(TA_LIB_ENABLE_DOTNET)
@@ -139,7 +143,7 @@ ENDIF(TA_LIB_ENABLE_SWIG)
 
 IF(TA_LIB_ENABLE_TESTS)
 	MESSAGE(STATUS "Build ta_regtest is enabled")
-	ADD_SUBDIRECTORY(c/src/tools/ta_regtest)
+	ADD_SUBDIRECTORY(ta-lib/c/src/tools/ta_regtest)
 	enable_testing()
 	add_test(NAME ta_regtest COMMAND ${EXECUTABLE_OUTPUT_PATH}/ta_regtest)
 ELSE() 
@@ -148,8 +152,15 @@ ENDIF(TA_LIB_ENABLE_TESTS)
 
 IF(TA_LIB_ENABLE_GEN_CODE)
 	MESSAGE(STATUS "Build gen_code is enabled")
-	ADD_SUBDIRECTORY(c/src/tools/gen_code)	
+	ADD_SUBDIRECTORY(ta-lib/c/src/tools/gen_code)
 ELSE() 
 	MESSAGE(STATUS "Build ta_regtest is disabled")
 ENDIF(TA_LIB_ENABLE_GEN_CODE)
 
+IF(TA_LIB_ENABLE_DOCS)
+	MESSAGE(STATUS "Build documentations is enabled")
+	find_package(Sphinx REQUIRED)
+	ADD_SUBDIRECTORY(tadoc)
+ELSE()
+	MESSAGE(STATUS "Build documentations is disabled")
+ENDIF(TA_LIB_ENABLE_DOCS)

@@ -1,13 +1,13 @@
-==================
+=================================
 SAR (Parabolic Stop and Reversal)
-==================
+=================================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------
@@ -28,4 +28,4 @@ Implementation
 --------------
 link to TA implementation.
 
-:doc:`TA_@Function@ <../functions/@Function@.rst>`
+

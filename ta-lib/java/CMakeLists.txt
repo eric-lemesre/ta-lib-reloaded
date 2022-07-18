@@ -40,8 +40,8 @@ if(NOT JUNIT_JAR)
 endif(NOT JUNIT_JAR)
 message(STATUS "JUnit found at  : ${JUNIT_JAR}")
 
-SET(TA_LIB_JAVA_BASEDIR "${ta-lib_SOURCE_DIR}/java")
-SET(TA_LIB_JAVA_BASE_SOURCEDIR "${TA_LIB_JAVA_BASEDIR}/src")
+SET(TA_LIB_JAVA_BASEDIR "${ta-lib_SOURCE_DIR}/ta-lib/java")
+SET(TA_LIB_JAVA_BASE_SOURCEDIR "${TA_LIB_JAVA_BASEDIR}/ta-lib/src")
 #set(TA_LIB_JAVA_PACKAGEDIR "meta/com/tictactec/ta/lib") 
 #SET(TA_LIB_JAVA_SOURCEDIR "${TA_LIB_JAVA_BASE_SOURCEDIR}/${meta/com/tictactec/ta/lib}")
 

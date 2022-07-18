@@ -1,13 +1,13 @@
-==================
+=============================
 RSI (Relative Strength Index)
-==================
+=============================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------

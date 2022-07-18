@@ -1,13 +1,13 @@
-==================
-Moyennes mobiles triangulaire (MMT)
-==================
+===============================
+Triangulae Moving Average (MMT)
+===============================
 
 Type
 ----
 
 Short description
 -----------------
-@ShortDescription@
+
 
 Description
 -----------
