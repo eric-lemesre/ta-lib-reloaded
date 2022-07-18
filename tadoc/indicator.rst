@@ -3,34 +3,40 @@
 Type d'indicateurs
 ==================
 
-Les indicateurs techniques sont des formules mathématiques basées sur l'étude des prix et/ou des volumes permettant de tirer profit d'une situation de marché. 
-Ils permettre de visualiser graphiquement l'évolution de la vitesse et de la qualité d'un mouvement sur une période donnée. Les indicateurs boursiers permettent 
-de prédire l'évolution future des cours.Ce sont des outils précieux d'aide à la décision quand on sait les utiliser. Il est important de bien comprendre 
-leur fonctionnement pour pouvoir ensuite optimiser les réglages et rendre l'indicateur performant. Il n'existe pas d'indicateur boursier miracle mais seulement 
-des indicateurs techniques que l'on utilise bien ou mal. 
-Chacun à ses qualités et ses défauts. Certains indicateurs sont meilleurs dans un marché directionnel alors que d'autres vont l'être pour identifier les retournements. 
+Technical indicators are mathematical formulas based on the study of prices and/or volumes allowing to take advantage of a market situation.
+They make it possible to visualize graphically the evolution of the speed and the quality of a movement over a given period. Stock market indicators allow
+to predict the future evolution of prices. These are valuable decision-making tools when you know how to use them. It is important to understand
+their operation in order to then be able to optimize the settings and make the indicator efficient. There is no miracle stock market indicator, only
+technical indicators that we use well or badly.
 
-Il existe différents types d'indicateurs techniques en bourse :
- * **Les indicateurs de momentum** : 
-    Ils traduisent de la force et de la vitesse du mouvement. Ils permettent d'identifier un essoufflement du courant acheteur/ vendeur 
-    et alertent sur une possible correction/retournement court terme du marché. Ces indicateurs offrent des signaux d'achat/vente médiocres 
-    et il faut donc les utiliser pour détecter les divergences avec la courbe de prix.
-* **Les indicateurs oscillateur** : 
-    Les oscillateurs peuvent être bornés ou non. Ils permettent d'identifier des zones de tensions entre acheteurs et vendeurs 
-    pouvant mener à une correction/retournement court terme. La plupart des traders utilisent ces indicateurs pour leurs zones de surachat/survente 
-    alors qu'elles offrent de mauvais résultats. Les oscillateurs sont des indicateurs avancés pertinent essentiellement dans un marché non directionnel 
-    ou pour la détection de divergence dans un marché directionnel.
-* **Les indicateurs de tendance** : 
-    Ils traduisent la dynamique du marché et principalement de sa vitesse. Ils permettent d'identifier la tendance en cours 
-    et de déterminer des niveaux de supports/résistances. Le trader peut ainsi se fixer des objectifs de cours ou placer ses stops de protection. 
-    Ces indicateurs sont très performants dans un marché directionnel mais offrent de mauvais résultats dans un marché volatil ou évoluant latéralement.
-* **Les indicateurs de volatilité** : 
-    Ils traduisent de la nervosité et de l'indécision présente sur le marché. Ils permettent de mesurer le degré de risque. 
-    Plus la volatilité est importante, plus le risque est grand. Ces indicateurs ne donnent pas de signaux d'achat/vente mais font apparaître les excès. 
-    Ce sont ces excès qui peuvent être exploiter par le trader dans toutes les conditions de marché.
-* **Les indicateurs de volume** : 
-     Ils traduisent de la force du mouvement et de la psychologie des investisseurs. Plus les volumes sont importants, plus le mouvement à du sens. 
-     A l'inverse, de faibles volumes indiquent un essoufflement du mouvement et une probable correction. Les indicateurs de volumes doivent être analyser 
-     avec le graphique de prix, tout seul, ils ne veulent rien dire. Ces indicateurs peuvent être utilisés aussi bien dans un marché directionnel 
-     que dans un marché sans tendance.
-     
+Each has its qualities and its defects. Some indicators are better in a directional market while others will be better at identifying reversals.
+
+There are different types of technical indicators in the stock market :
+
+* **Momentums indicators** :
+    They translate force and speed of movement. They make it possible to identify a slowdown in the buying/ selling current
+    and warn of a possible short-term market correction/reversal. These indicators offer poor buy/sell signals
+    and therefore should be used to detect divergences with the price curve.
+
+* **Oscillators indicators** :
+    Oscillators can be bounded or not. They identify areas of tension between buyers and sellers
+    that could lead to a short-term correction/reversal. Most traders use these indicators for their overbought/oversold areas
+    while they offer poor results. Oscillators are relevant leading indicators mainly in a non-directional market
+    or for detecting divergence in a directional market.
+
+* **Trends indicators** :
+    They reflect the dynamics of the market and mainly its speed. They allow to identify the current trend
+    and determine support/resistance levels. The trader can thus set price targets or place protective stops.
+    These indicators perform very well in a directional market but perform poorly in a volatile or sideways moving market.
+
+* **Volatility indicators** :
+    They reflect the nervousness and indecision present in the market. They make it possible to measure the degree of risk.
+    The greater the volatility, the greater the risk. These indicators do not give buy/sell signals but show excesses.
+    It is these excesses that can be exploited by the trader in all market conditions.
+
+* **Volumes indicators de volume** :
+     They reflect the strength of the movement and the psychology of investors. The larger the volumes, the more meaningful the movement.
+     Conversely, low volumes indicate that the movement is running out of steam and a probable correction. Volume indicators must be analyzed
+     with the price chart, on their own, they mean nothing. These indicators can be used both in a directional market
+     than in a trend less market.
+
