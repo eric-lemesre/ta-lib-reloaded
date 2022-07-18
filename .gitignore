@@ -17,6 +17,7 @@ ta-lib/swig/temp/python/wrap/*.py
 
 ta-lib/java/classes/
 ta-lib/java/.settings/
+/tadoc/conf.py
 
 # http://www.gnu.org/software/automake
 Makefile.in
@@ -745,3 +746,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
