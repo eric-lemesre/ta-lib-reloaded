@@ -1,6 +1,6 @@
-===============================
-Triangulae Moving Average (MMT)
-===============================
+===========================================
+Accumulation Distribution of Williams (ADW)
+===========================================
 
 Type
 ----
@@ -28,4 +28,4 @@ Implementation
 --------------
 link to TA implementation.
 
-:doc:`TA_TRIMA <../functions/TRIMA.rst>`
+

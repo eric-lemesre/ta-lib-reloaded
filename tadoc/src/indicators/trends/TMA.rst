@@ -1,6 +1,6 @@
-========================================
-TRIX (Triple Exponential Moving Average)
-========================================
+===============================
+Triangulae Moving Average (TMA)
+===============================
 
 Type
 ----
@@ -28,4 +28,4 @@ Implementation
 --------------
 link to TA implementation.
 
-
+:doc:`TA_TRIMA <../functions/TRIMA.rst>`

@@ -1,9 +1,10 @@
-==================================
-Accumulation Distribution des Prix
-==================================
+===================
+Moving Average (MA)
+===================
 
 Type
 ----
+Trend indicator
 
 Short description
 -----------------
@@ -28,4 +29,4 @@ Implementation
 --------------
 link to TA implementation.
 
-
+:doc:`TA_MA <../functions/MA.rst>`

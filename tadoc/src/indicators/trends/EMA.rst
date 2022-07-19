@@ -1,9 +1,10 @@
-=====================================
-Moyennes mobiles exponentielles (MME)
-=====================================
+================================
+Exponential Moving Average (EMA)
+================================
 
 Type
 ----
+Trends indicators
 
 Short description
 -----------------

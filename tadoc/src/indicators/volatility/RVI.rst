@@ -1,9 +1,10 @@
-========================
-Moyennes mobiles de Hull
-========================
+===============================
+RVI (Relative Volatility Index)
+===============================
 
 Type
 ----
+Volatility indicator
 
 Short description
 -----------------
