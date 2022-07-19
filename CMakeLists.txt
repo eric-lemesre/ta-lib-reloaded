@@ -20,7 +20,7 @@ OPTION(TA_LIB_ENABLE_EXCEL "Enable Excel bindings" OFF)
 OPTION(TA_LIB_ENABLE_JAVA "Enable Java bindings" ON)
 OPTION(TA_LIB_ENABLE_SWIG "Enable SWIG bindings" OFF)
 OPTION(TA_LIB_ENABLE_TESTS "Enable tests building" ON)
-OPTION(TA_LIB_ENABLE_DOCS "Enable documantations building" OFF)
+OPTION(TA_LIB_ENABLE_DOCS "Enable documantations building" ON)
 
 # Packaging 
 

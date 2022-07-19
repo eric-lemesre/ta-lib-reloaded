@@ -1,9 +1,10 @@
-==================
-AdLine ratio
-==================
+===============================
+End Point Moving Average (EPMA)
+===============================
 
 Type
 ----
+Trends indicators
 
 Short description
 -----------------

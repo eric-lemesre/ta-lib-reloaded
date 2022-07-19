@@ -1,9 +1,10 @@
-============================
-Rainbow Moving Average (RMA)
-============================
+===============================
+Arithmetic Moving Average (AMA)
+===============================
 
 Type
 ----
+Trend indicator
 
 Short description
 -----------------

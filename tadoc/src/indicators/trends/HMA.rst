@@ -1,9 +1,10 @@
-=============================
-Oscillateur de Bollinger (%B)
-=============================
+=========================
+Hull Moving Average (HMA)
+=========================
 
 Type
 ----
+Trend indicator
 
 Short description
 -----------------

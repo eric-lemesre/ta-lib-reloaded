@@ -1,9 +1,10 @@
-===================
-MM (Moving Average)
-===================
+=========================
+Bollinger Oscillator (%B)
+=========================
 
 Type
 ----
+Oscillator
 
 Short description
 -----------------
@@ -28,4 +29,4 @@ Implementation
 --------------
 link to TA implementation.
 
-:doc:`TA_MA <../functions/MA.rst>`
+

@@ -1,9 +1,10 @@
-===========================================
-Accumulation distribution de Williams (ADW)
-===========================================
+=======================
+OBV (On Balance Volume)
+=======================
 
 Type
 ----
+Volume indicator
 
 Short description
 -----------------
