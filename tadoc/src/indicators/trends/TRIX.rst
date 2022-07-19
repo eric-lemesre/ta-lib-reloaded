@@ -1,9 +1,10 @@
-===============================
-Arithmetic Moving Average (MMA)
-===============================
+========================================
+Triple Exponential Moving Average (TRIX)
+========================================
 
 Type
 ----
+Trend indicator
 
 Short description
 -----------------

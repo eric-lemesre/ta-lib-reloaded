@@ -1,9 +1,10 @@
-=======================
-OBV (On Balance Volume)
-=======================
+================
+Price Oscillator
+================
 
 Type
 ----
+Oscillator indicator
 
 Short description
 -----------------
@@ -28,4 +29,4 @@ Implementation
 --------------
 link to TA implementation.
 
-
+:doc:`TA_APO <../functions/APO.rst>`

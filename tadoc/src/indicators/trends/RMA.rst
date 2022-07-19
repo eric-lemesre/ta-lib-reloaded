@@ -1,9 +1,10 @@
-==========================
-Moyennes mobiles pondérées
-==========================
+============================
+Rainbow Moving Average (RMA)
+============================
 
 Type
 ----
+Trend indicator
 
 Short description
 -----------------
@@ -28,4 +29,4 @@ Implementation
 --------------
 link to TA implementation.
 
-:doc:`TA_WMA <../functions/WMA.rst>`
+

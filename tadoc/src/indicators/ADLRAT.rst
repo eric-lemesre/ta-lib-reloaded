@@ -1,6 +1,6 @@
-================
-Price Oscillator
-================
+============
+AdLine ratio
+============
 
 Type
 ----
@@ -28,4 +28,4 @@ Implementation
 --------------
 link to TA implementation.
 
-:doc:`TA_APO <../functions/APO.rst>`
+
