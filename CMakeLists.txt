@@ -4,7 +4,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 PROJECT(ta-lib)
 
 SET(TA_LIB_VERSION_MAJOR 0)
-SET(TA_LIB_VERSION_MINOR 4)
+SET(TA_LIB_VERSION_MINOR 5)
 SET(TA_LIB_VERSION_BUILD 0)
 #SET(TA_LIB_VERSION_EXTRA "dev")
 
@@ -30,7 +30,7 @@ SET(CPACK_PACKAGE_VERSION ${TA_LIB_VERSION_FULL})
 SET(CPACK_SOURCE_PACKAGE_FILE_NAME "${PROJECT_NAME}-src-${TA_LIB_VERSION_FULL}")
 
 SET(CPACK_SOURCE_GENERATOR "TGZ;ZIP")
-SET(CPACK_SOURCE_IGNORE_FILES "build/;\\\\.idea;\\\\.vscode;/CVS/;/\\\\.svn/;\\\\.git/;temp/;\\\\.swp$;\\\\.#;/#;\\\\.*~;cscope\\\\.*;\\\\.cproject;\\\\.project")
+SET(CPACK_SOURCE_IGNORE_FILES "build/;\\\\.idea;\\\\.vscode;\\\\.project;/CVS/;/\\\\.svn/;\\\\.git/;temp/;\\\\.swp$;\\\\.#;/#;\\\\.*~;cscope\\\\.*;\\\\.cproject")
 SET(CPACK_GENERATOR "TGZ;ZIP")
 SET(CPACK_INCLUDE_TOPLEVEL_DIRECTORY OFF)
 

@@ -52,6 +52,7 @@ SET(ta-lib_CSOURCES
 	${TA_LIB_CSOURCE_DIR}/src/ta_func/ta_WMA.c
 	${TA_LIB_CSOURCE_DIR}/src/ta_func/ta_HT_DCPHASE.c
 	${TA_LIB_CSOURCE_DIR}/src/ta_func/ta_CDLSPINNINGTOP.c
+	${TA_LIB_CSOURCE_DIR}/src/ta_func/ta_ACCBANDS.c
 	${TA_LIB_CSOURCE_DIR}/src/ta_func/ta_CDLIDENTICAL3CROWS.c
 	${TA_LIB_CSOURCE_DIR}/src/ta_func/ta_LINEARREG_ANGLE.c
 	${TA_LIB_CSOURCE_DIR}/src/ta_func/ta_ADOSC.c
