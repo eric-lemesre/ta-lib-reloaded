@@ -18,6 +18,7 @@ ta-lib/swig/temp/python/wrap/*.py
 ta-lib/java/classes/
 ta-lib/java/.settings/
 /tadoc/src/conf.py
+/tadoc/src/api/
 
 # http://www.gnu.org/software/automake
 Makefile.in
