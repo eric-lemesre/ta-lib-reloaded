@@ -1,6 +1,8 @@
-The following license applies only to the users of the Excel add-ins:
+The following license applies only to the users of the Excel add-ins :
+======================================================================
 
 TA-Lib Copyright (c) 1999-2007, Mario Fortier
+
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or
@@ -32,14 +34,16 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-=================================================================
+TA-LIB Excel Add-in
+-------------------
+
 THE TA-LIB EXCEL ADD-INS IS EMBEDDING OTHER OPEN-SOURCE PROJECTS. 
 THEIR LICENSES ARE APPENDED BELOW. LICENSES ARE ALSO AVAILABLE IN
 THE ORIGINAL PACKAGE DISTRIBUTED AT HTTP://TA-LIB.ORG
-=================================================================
 
 License For XLW 
 ---------------
+
 Copyright (c) 1998, 1999, 2001, 2002 Jérôme Lecomte
 All rights reserved.
 Redistribution and use in source and binary forms, with or without
@@ -65,6 +69,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 License For Trio
 ----------------
+
 Copyright (C) 2001 Bjorn Reese <breese@users.sourceforge.net>
 
 Permission to use, copy, modify, and distribute this software for any
