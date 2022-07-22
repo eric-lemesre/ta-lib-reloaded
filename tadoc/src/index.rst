@@ -7,11 +7,12 @@ Welcome to @TA_LIB_PROJECT_TITTLE@'s documentation!
 ===================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
-
-   site/index
+   :includehidden:
+   site/*
    indicator
+   indicators/*
 
 
 Indices and tables
