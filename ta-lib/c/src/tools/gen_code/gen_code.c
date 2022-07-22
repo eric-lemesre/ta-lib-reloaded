@@ -121,6 +121,13 @@
 # define TA_MCPP_EXE "/usr/bin/mcpp"
 #endif
 
+/**
+ * @brief Build path by concatenation list arg with OS file separator
+ * 
+ * @param count number of directory fragment
+ * @param ... directory fragments
+ * @return char* the fs path
+ */
 static char *ta_fs_path(int count, ...) {
     char *path = (char *)malloc(16000); /* XXX quick and dirty */
     char *p; 
@@ -1313,11 +1320,11 @@ static void doForEachFunctionXml(const TA_FuncInfo *funcInfo,
 	/* General stuff about function */
 	fprintf(gOutFunc_XML->file, "	<!-- %s -->\n", funcInfo->name);
 	fprintf(gOutFunc_XML->file, "	<FinancialFunction>\n");
-    fprintf(gOutFunc_XML->file, "		<Abbreviation>%s</Abbreviation>\n", (funcInfo->name == NULL)? "" : funcInfo->name);
-    fprintf(gOutFunc_XML->file, "		<CamelCaseName>%s</CamelCaseName>\n", (funcInfo->camelCaseName == NULL)? "" : funcInfo->camelCaseName);
+   fprintf(gOutFunc_XML->file, "		<Abbreviation>%s</Abbreviation>\n", (funcInfo->name == NULL)? "" : funcInfo->name);
+   fprintf(gOutFunc_XML->file, "		<CamelCaseName>%s</CamelCaseName>\n", (funcInfo->camelCaseName == NULL)? "" : funcInfo->camelCaseName);
 	ReplaceReservedXmlCharacters(funcInfo->hint, tempString);
-    fprintf(gOutFunc_XML->file, "		<ShortDescription>%s</ShortDescription>\n", (funcInfo->hint == NULL)? "" : tempString);
-    fprintf(gOutFunc_XML->file, "		<GroupId>%s</GroupId>\n", funcInfo->group);
+   fprintf(gOutFunc_XML->file, "		<ShortDescription>%s</ShortDescription>\n", (funcInfo->hint == NULL)? "" : tempString);
+   fprintf(gOutFunc_XML->file, "		<GroupId>%s</GroupId>\n", funcInfo->group);
 
 	/* Optional function flags */
 	if(funcInfo->flags & (TA_FUNC_FLG_OVERLAP | TA_FUNC_FLG_VOLUME | TA_FUNC_FLG_CANDLESTICK | TA_FUNC_FLG_UNST_PER))
@@ -1345,7 +1352,7 @@ static void doForEachFunctionXml(const TA_FuncInfo *funcInfo,
 
 
 	/* Required input arguments */
-    fprintf(gOutFunc_XML->file, "		<RequiredInputArguments>\n");
+   fprintf(gOutFunc_XML->file, "		<RequiredInputArguments>\n");
 	for(i=0; i<funcInfo->nbInput; i++)
 	{
 		retCode = TA_GetInputParameterInfo( funcInfo->handle, i, &inputInfo);

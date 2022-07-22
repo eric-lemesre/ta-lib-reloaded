@@ -187,17 +187,22 @@ typedef int TA_FuncFlags;
                                           */
 #define TA_FUNC_FLG_CANDLESTICK 0x10000000 /* Output shall be a candlestick */
 
+/**
+ * @brief Constant information about the function
+ * @struct TA_FuncInfo
+ * 
+ * Constant information about the function. The
+ * information found in this structure is guarantee
+ * to not change at runtime.* 
+ */
 typedef struct TA_FuncInfo
 {
-   /* Constant information about the function. The
-    * information found in this structure is guarantee
-    * to not change at runtime.
-    */
-   const char * name;
-   const char * group;
+
+   const char * name;           /*!< function name */
+   const char * group;          /*!< function group */
 
    const char * hint;
-   const char * camelCaseName;
+   const char * camelCaseName;  /*!< description in camel case*/
    TA_FuncFlags flags;
 
    unsigned int nbInput;
@@ -242,53 +247,75 @@ TA_RetCode TA_ForEachFunc( TA_CallForEachFunc functionToCall, void *opaqueData )
 
 /* Structures representing extended information on a parameter. */
 
+/**
+ * @brief Range of real
+ * @struct TA_RealRange
+ * 
+ * Suggested value are used by Tech. Analysis software
+ * doing parameter "optimization". Can be ignored by most user.
+ */
 typedef struct TA_RealRange
 {
-   TA_Real     min;
-   TA_Real     max;
-   TA_Integer  precision; /* nb of digit after the '.' */
+   TA_Real     min;        /*!< Min value */
+   TA_Real     max;        /*!< Min value */
+   TA_Integer  precision;  /*!< nb of digit after the '.' */
 
-   /* The following suggested value are used by Tech. Analysis software
-    * doing parameter "optimization". Can be ignored by most user.
-    */
-   TA_Real     suggested_start;
-   TA_Real     suggested_end;
-   TA_Real     suggested_increment;
+   TA_Real     suggested_start;     /*!< start value for optimisation.*/
+   TA_Real     suggested_end;       /*!< end value for optimisation.*/
+   TA_Real     suggested_increment; /*!< increment for optimisation.*/
 } TA_RealRange;
 
+/**
+ * @brief Range of integer  
+ * @struct TA_IntegerRange
+ * 
+ * Suggested value are used by Tech. Analysis software
+ * doing parameter "optimization". Can be ignored by most user.
+ */
 typedef struct TA_IntegerRange
 {
    TA_Integer  min;
    TA_Integer  max;
 
-   /* The following suggested value are used by Tech. Analysis software
-    * doing parameter "optimization". Can be ignored by most user.
-    */
-   TA_Integer  suggested_start;
-   TA_Integer  suggested_end;
-   TA_Integer  suggested_increment;
+   TA_Integer  suggested_start;    /*!< start value for optimisation.*/
+   TA_Integer  suggested_end;      /*!< end value for optimisation.*/
+   TA_Integer  suggested_increment;/*!< increment for optimisation.*/
 } TA_IntegerRange;
 
+/**
+ * @brief A TA_Real value and the corresponding string.
+ * @struct TA_RealDataPair
+ */
 typedef struct TA_RealDataPair
 {
-   /* A TA_Real value and the corresponding string. */
-   TA_Real     value;
-   const char *string;
+   TA_Real     value;      /*!< real value */
+   const char *string;     /*!< corresponding string*/
 } TA_RealDataPair;
 
+/**
+ * @brief A TA_Integer value and the corresponding string.
+ * @struct TA_IntegerDataPair
+ */
 typedef struct TA_IntegerDataPair
 {
-   /* A TA_Integer value and the corresponding string. */
-   TA_Integer  value;
-   const char *string;
+   TA_Integer  value;      /*!< integer value */
+   const char *string;     /*!< corresponding string*/
 } TA_IntegerDataPair;
 
+/**
+ * @brief List of real
+ * @struct TA_RealList
+ */
 typedef struct TA_RealList
 {
    const TA_RealDataPair *data;
    unsigned int nbElement;
 } TA_RealList;
 
+/**
+ * @brief List of integer
+ * @struct TA_IntegerList
+ */
 typedef struct TA_IntegerList
 {
    const TA_IntegerDataPair *data;
