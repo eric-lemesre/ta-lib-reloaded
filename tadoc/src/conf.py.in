@@ -81,13 +81,13 @@ html_theme_options = {
     'source_link_position': "footer",
 }
 
- -- Options for sphinx-intl example
-
-locale_dirs = ['locale/']   # po files will be created in this directory
-gettext_compact = False     # optional: avoid file concatenation in sub directories.
-
-def setup(app):
-    app.add_stylesheet("my-styles.css")
+// -- Options for sphinx-intl example
+//
+//locale_dirs = ['locale/']   # po files will be created in this directory
+//gettext_compact = False     # optional: avoid file concatenation in sub directories.
+//
+//def setup(app):
+//    app.add_stylesheet("my-styles.css")
 
 
 """
