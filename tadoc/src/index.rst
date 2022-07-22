@@ -7,9 +7,12 @@ Welcome to TA-Lib-doc's documentation!
 ======================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
-
+   :includehidden:
+   site/*
+   indicator
+   indicators/*
 
 
 Indices and tables

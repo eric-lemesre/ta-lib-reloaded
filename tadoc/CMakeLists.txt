@@ -21,7 +21,7 @@ configure_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/src/conf.py"
     @ONLY)
 
-set(SPHINX_MASTER "indicator")
+set(SPHINX_MASTER "index")
 
 sphinx_add_docs(
   ta-lib-doc
