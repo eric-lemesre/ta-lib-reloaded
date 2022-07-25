@@ -49,6 +49,7 @@ function and rename as needed. You can always change the table later if you want
 5. The body of the function will be created in `ta-lib\c\src\ta_func`. Add the code for the TA function outside of the generated area. 
 Comments in the file helps to identify these area. These areas are preserve when `gen_code` is run again.
 
+
 Writing a new TA function requires a good understanding of `startidx`, `endidx`, `outBegIdx` and `outNbElement`. If you are not sure about this, 
 I strongly suggest to study a simple TA function and read again the C/C++ API.
 
@@ -63,6 +64,7 @@ All these syntax differences are handled by pre-processing as follow:
 
 .. code-block:: c
    :caption: pre-processing
+
     #if defined( _MANAGED )
         ... here is the code for VS2005 and later...
     #elif defined( _JAVA )
