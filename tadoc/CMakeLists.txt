@@ -24,6 +24,6 @@ configure_file(
 set(SPHINX_MASTER "indicator")
 
 sphinx_add_docs(
-  ta-lib-doc
+  docs
   BUILDER html
   SOURCE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src)
