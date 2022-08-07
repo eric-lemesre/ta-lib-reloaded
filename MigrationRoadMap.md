@@ -4,7 +4,7 @@
   1. import to git from svn
      * [x] import code history
      * [x] import tag
-     * [ ] binary release
+     * [x] binary release
   2. port all build script to CMake Build tools
      * [ ] Build ta-lib library from c source file `ta-lib/c/src/{ta_abstrac,ta_common,ta_func}` [link to source](ta-lib/c/src)
        * [x] Unix shared lib
@@ -12,7 +12,7 @@
        * [x] Windows dll
        * [ ] Mac OSX shared lib
        * [ ] Mac OSX static lib
-     * [ ] Build ta_regtest programme from c source file `ta-lib/c/src/tools/ta_regtest` [link to source](ta-lib/c/src/tools/ta_regtest)
+     * [x ] Build ta_regtest programme from c source file `ta-lib/c/src/tools/ta_regtest` [link to source](ta-lib/c/src/tools/ta_regtest)
        * [x] on Unix OS
        * [x] on Windows OS
        * [ ] on MacOSX OS
@@ -23,7 +23,7 @@
      * [ ] Build ta-lib.jar programme from java source file `ta-lib/java` [link to source](ta-lib/java)
        * with initial `ant` script file
           * [x] running on Unix OS
-          * [ ] running on Windows OS
+          * [x] running on Windows OS
           * [ ] running on MacOSX OS
      * [ ] Build SWIG wrapper `ta-lib/swig` [link to source](ta-lib/swig)
        * for language PERL
