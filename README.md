@@ -6,7 +6,8 @@ This repository is **unofficial** migration from [svn TA-Lib on sourceforge](htt
 
 Information about Official TA-Lib implementation [TA-Lib web site](http://ta-lib.org).
 
-## Migration roadmap 
+## Migration roadmap
+
 see [Migration Roadamp](MigrationRoadMap.md)
 
 ## Build Unix
@@ -21,10 +22,11 @@ $ cmake . -B build
 ```
 
 ``` sh
-$ cmake --build build/
+cmake --build build/
 ```
 
-### this last command build in Unix OS :
+### this last command build in Unix OS
+
 * `build/bin/gen_code` : program to generate lost of things for new function.
 * `build/bin/te_regtest` : regression test for somme functions.
 * `build/lib/lalib_lib.a` : library to include in static link.
@@ -33,7 +35,7 @@ $ cmake --build build/
 * `build/lib-java/ta-lib-[full version].jar` : library jar for java.
 * `build/ta-lib-[full version]-test.jar` : jar for testing java package.
 
-#### run test 
+#### run test
 
 ``` sh
 # build test and run it
@@ -56,22 +58,26 @@ make: Leaving directory '[TA-LibRoot]/build'
 
 1. Generate C library packages
 
-  ``` sh
-  $ make -C build package
-  ```
+    ``` sh
+    make -C build package
+    ```
 
-* `build/ta-lib-[full version]-Linux.tar.gz`
-* `build/ta-lib-[full version]-Linux.zip`
+    * `build/ta-lib-[full version]-Linux.tar.gz`
+    * `build/ta-lib-[full version]-Linux.zip`
 
-2. Generate source packages
-  ``` sh
-  $ make -C build package_source
-  ```
-* `build/ta-lib-src-[full version]-Linux.tar.gz`
-* `build/ta-lib-src-[full version].zip`
+1. Generate source packages
 
-3. build documentation
-  ``` sh
-  $ make -C build docs
-  ```
-* `build/tadoc/ta-lib-doc/` : html docs from .rst files in `[TA-LibRoot]/tadoc/src`
+    ``` sh
+    make -C build package_source
+    ```
+
+    * `build/ta-lib-src-[full version]-Linux.tar.gz`
+    * `build/ta-lib-src-[full version].zip`
+
+1. build documentation
+
+    ``` sh
+    make -C build docs
+    ```
+
+    * `build/tadoc/ta-lib-doc/` : html docs from .rst files in `[TA-LibRoot]/tadoc/src`
