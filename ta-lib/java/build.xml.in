@@ -2,17 +2,19 @@
 <project name="@PROJECT_NAME@" basedir="@TA_LIB_JAVA_BASEDIR@" default="build">
 	<property name="debug" value="true"/>
 	<property name="dir.src" value="src/"/>
-	<property name="file.jar" value="@ta-lib_BINARY_DIR@/lib-java/@TA_LIB_JAR_TARGET_NAME@.jar"/>
-	<property name="sources.jar" value="@ta-lib_BINARY_DIR@/lib-java/@TA_LIB_JAR_TARGET_NAME@-sources.jar" />
-	<property name="test.jar" value="@ta-lib_BINARY_DIR@/lib-java/@TA_LIB_JAR_TARGET_NAME@-test.jar" />
+	<property name="file.jar" value="@TA_LIB_JAVA_BINARY_DIR@/@TA_LIB_JAR_TARGET_NAME@.jar"/>
+	<property name="jar-sources.jar" value="@TA_LIB_JAVA_BINARY_DIR@/@TA_LIB_JAR_TARGET_NAME@-sources.jar" />
+	<property name="test.jar" value="@TA_LIB_JAVA_BINARY_DIR@/@TA_LIB_JAR_TARGET_NAME@-test.jar" />
 	<property name="dir.classes" value="@ta-lib_BINARY_DIR@/java/classes"/>
 	<property name="junit.jar" value="@JUNIT_JAR@"/>
+	<property name="package" value="com/tictactec/ta/lib"/>
 	<path id="classpath.base">
 		<pathelement location="${dir.src}"/>
 		<pathelement location="${junit.jar}"/>
 	</path>
 	<path id="classpath.test">
 		<pathelement location="${file.jar}"/>
+		<pathelement location="${test.jar}"/>
 		<pathelement location="${junit.jar}"/>
 	</path>
 	<target name="test" depends="build">
@@ -29,17 +31,23 @@
 		<copy todir="${dir.classes}" includeEmptyDirs="false">
 			<fileset dir="${dir.src}" excludes="**/*.java"/>
 		</copy>
-		<javac srcdir="${dir.src}" destdir="${dir.classes}" debug="${debug}">
+		<javac srcdir="${dir.src}" destdir="${dir.classes}" 
+			includeantruntime="true"
+			debug="${debug}">
 			<classpath refid="classpath.base"/>
 		</javac>
 		<delete file="${file.jar}"/>
 		<jar destfile="${file.jar}" 
 			basedir="${dir.classes}"
-			excludes="com/tictactec/ta/lib/test/*.class"/>
+			excludes="${package}/test/**/*.class"/>
 
-		<jar destfile="${test.jar}" basedir="${dir.classes}" />
+		<delete file="${test.jar}"/>
+		<jar destfile="${test.jar}" 
+			basedir="${dir.classes}" 
+			excludes="${package}/meta/**/*.class,${package}/*.class"/>
 
-		<jar destfile="${sources.jar}" 
+		<delete file="${jar-sources.jar}"/>
+		<jar destfile="${jar-sources.jar}" 
 			basedir="${dir.src}" excludes="**/*.class"/>
 	</target>
 	<target name="clean" description="clean up all generated files.">
@@ -47,6 +55,6 @@
 		<delete dir="${dir.classes}"/>
 		<delete file="${file.jar}"/>
 		<delete file="${test.jar}"/>
-		<delete file="${sources.jar}"/>
+		<delete file="${jar-sources.jar}"/>
 	</target>
 </project>

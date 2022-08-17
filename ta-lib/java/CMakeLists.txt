@@ -40,6 +40,7 @@ message(STATUS "JUnit found at  : ${JUNIT_JAR}")
 
 SET(TA_LIB_JAVA_BASEDIR "${ta-lib_SOURCE_DIR}/ta-lib/java")
 SET(TA_LIB_JAVA_BASE_SOURCEDIR "${TA_LIB_JAVA_BASEDIR}/ta-lib/src")
+SET(TA_LIB_JAVA_BINARY_DIR "${ta-lib_BINARY_DIR}/lib-java")
 #set(TA_LIB_JAVA_PACKAGEDIR "meta/com/tictactec/ta/lib") 
 #SET(TA_LIB_JAVA_SOURCEDIR "${TA_LIB_JAVA_BASE_SOURCEDIR}/${meta/com/tictactec/ta/lib}")
 
@@ -57,6 +58,6 @@ ADD_CUSTOM_COMMAND(
 )
 
 IF(TA_LIB_ENABLE_TESTS)
-    set(TA_LIB_CLASSPATH_TEST "${ta-lib_BINARY_DIR}/${TA_LIB_JAR_TARGET_NAME}-test.jar:${JUNIT_JAR}:${ta-lib_BINARY_DIR}/lib-java/${TA_LIB_JAR_TARGET_NAME}.jar")
+    set(TA_LIB_CLASSPATH_TEST "${TA_LIB_JAVA_BINARY_DIR}/${TA_LIB_JAR_TARGET_NAME}-test.jar:${JUNIT_JAR}:${TA_LIB_JAVA_BINARY_DIR}/${TA_LIB_JAR_TARGET_NAME}.jar")
     add_test(NAME ta-lib_jar COMMAND ${Java_JAVA_EXECUTABLE} -cp ${TA_LIB_CLASSPATH_TEST} com.tictactec.ta.lib.test.AllTests)
 ENDIF(TA_LIB_ENABLE_TESTS)
