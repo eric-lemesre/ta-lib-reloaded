@@ -119,7 +119,7 @@ Total Test time (real) =  11.12 sec
     * `build/ta-lib-[full version]-Linux.tar.gz`
     * `build/ta-lib-[full version]-Linux.zip`
 
-1. Generate source packages
+2. Generate source packages
 
     ``` sh
     make -C build package_source
@@ -128,7 +128,7 @@ Total Test time (real) =  11.12 sec
     * `build/ta-lib-src-[full version]-Linux.tar.gz`
     * `build/ta-lib-src-[full version].zip`
 
-1. build documentation
+3. build documentation
 
     ``` sh
     make -C build docs
