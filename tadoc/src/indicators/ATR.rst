@@ -1,5 +1,5 @@
 ========================
-ATR (Average True Range)
+Average True Range (ATR)
 ========================
 
 Type

@@ -1,5 +1,5 @@
 ======================
-LLV (Lowest Low Value)
+Lowest Low Value (LLV)
 ======================
 
 Type

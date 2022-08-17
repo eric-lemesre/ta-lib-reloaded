@@ -1,5 +1,5 @@
 ======================
-MFI (Money Flow Index)
+Money Flow Index (MFI)
 ======================
 
 Type

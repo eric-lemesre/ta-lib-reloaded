@@ -1,5 +1,5 @@
 ===============================
-CSI (Commodity Selection Index)
+Commodity Selection Index (CSI)
 ===============================
 
 Type
