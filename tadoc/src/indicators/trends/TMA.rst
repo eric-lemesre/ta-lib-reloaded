@@ -1,5 +1,4 @@
-===============================
-Triangulae Moving Average (TMA)
+Triangular Moving Average (TMA)
 ===============================
 
 Type
