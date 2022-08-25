@@ -1,5 +1,5 @@
 ============================================
-MACD (Moving Average Convergence Divergence)
+Moving Average Convergence Divergence (MACD)
 ============================================
 
 Type

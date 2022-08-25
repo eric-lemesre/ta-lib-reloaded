@@ -1,5 +1,5 @@
 ===================
-TPR (Typical Price)
+Typical Price (TPR)
 ===================
 
 Type

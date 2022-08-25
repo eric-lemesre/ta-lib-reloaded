@@ -1,6 +1,6 @@
-============================
-PVT (Price and Volume Trend)
-============================
+===========================
+Simple Moving Average (SMA)
+===========================
 
 Type
 ----
@@ -28,4 +28,4 @@ Implementation
 --------------
 link to TA implementation.
 
-
+:doc:`TA_SMA <../functions/SMA.rst>`

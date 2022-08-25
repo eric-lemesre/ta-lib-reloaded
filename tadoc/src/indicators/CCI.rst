@@ -1,5 +1,5 @@
 =============================
-CCI (Commodity Channel Index)
+Commodity Channel Index (CCI)
 =============================
 
 Type

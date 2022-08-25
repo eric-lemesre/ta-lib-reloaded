@@ -1,5 +1,5 @@
 ======================================
-RAVI (Range Action Verification Index)
+Range Action Verification Index (RAVI)
 ======================================
 
 Type

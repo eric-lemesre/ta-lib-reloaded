@@ -1,5 +1,5 @@
 ========================
-TVI (Trade Volume Index)
+Trade Volume Index (TVI)
 ========================
 
 Type

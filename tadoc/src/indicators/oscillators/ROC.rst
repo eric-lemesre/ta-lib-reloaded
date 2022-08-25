@@ -1,6 +1,6 @@
-=====================
-Simple Moving Average
-=====================
+==========================
+Price Rate of Change (ROC)
+==========================
 
 Type
 ----
@@ -28,4 +28,4 @@ Implementation
 --------------
 link to TA implementation.
 
-:doc:`TA_SMA <../functions/SMA.rst>`
+

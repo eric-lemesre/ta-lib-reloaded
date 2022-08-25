@@ -1,5 +1,5 @@
 ===================
-FR (Force Relative)
+Force Relative (FR)
 ===================
 
 Type

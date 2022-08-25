@@ -1,5 +1,5 @@
 ========================================
-VIDYA (Variable Index Dynamique Average)
+Variable Index Dynamique Average (VIDYA)
 ========================================
 
 Type

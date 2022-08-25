@@ -14,6 +14,8 @@ Each has its qualities and its defects. Some indicators are better in a directio
 There are different types of technical indicators in the stock market :
 
 * **Momentums indicators** :
+    **Momentum indicators (leading) evaluate the speed of price change over time.**
+    
     They translate force and speed of movement. They make it possible to identify a slowdown in the buying/ selling current
     and warn of a possible short-term market correction/reversal. These indicators offer poor buy/sell signals
     and therefore should be used to detect divergences with the price curve.
@@ -26,6 +28,8 @@ There are different types of technical indicators in the stock market :
         indicators/momentum/*
 
 * **Oscillators indicators** :
+    **Measure oscillations in buying and selling pressure.**
+    
     Oscillators can be bounded or not. They identify areas of tension between buyers and sellers
     that could lead to a short-term correction/reversal. Most traders use these indicators for their overbought/oversold areas
     while they offer poor results. Oscillators are relevant leading indicators mainly in a non-directional market
@@ -39,6 +43,8 @@ There are different types of technical indicators in the stock market :
         indicators/oscillators/*
 
 * **Trends indicators** :
+    **Trend indicators (lagging) analyze whether a market is moving up, down, or sideways over time.**
+    
     They reflect the dynamics of the market and mainly its speed. They allow to identify the current trend
     and determine support/resistance levels. The trader can thus set price targets or place protective stops.
     These indicators perform very well in a directional market but perform poorly in a volatile or sideways moving market.
@@ -51,7 +57,7 @@ There are different types of technical indicators in the stock market :
         indicators/trends/*
 
 * **Volatility indicators** :
-    They reflect the nervousness and indecision present in the market. They make it possible to measure the degree of risk.
+    **They reflect the nervousness and indecision present in the market**. They make it possible to measure the degree of risk.
     The greater the volatility, the greater the risk. These indicators do not give buy/sell signals but show excesses.
     It is these excesses that can be exploited by the trader in all market conditions.
 
@@ -63,6 +69,8 @@ There are different types of technical indicators in the stock market :
         indicators/volatility/*
 
 * **Volumes indicators de volume** :
+    **Volume indicators (leading or lagging) tally up trades and quantify whether bulls or bear are in control.**
+    
     They reflect the strength of the movement and the psychology of investors. The larger the volumes, the more meaningful the movement.
     Conversely, low volumes indicate that the movement is running out of steam and a probable correction. Volume indicators must be analyzed
     with the price chart, on their own, they mean nothing. These indicators can be used both in a directional market

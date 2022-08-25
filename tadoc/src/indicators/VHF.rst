@@ -1,5 +1,5 @@
 ================================
-VHF (Vertical Horizontal Filter)
+Vertical Horizontal Filter (VHF)
 ================================
 
 Type

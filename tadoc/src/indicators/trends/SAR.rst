@@ -1,5 +1,5 @@
 =================================
-SAR (Parabolic Stop and Reversal)
+Parabolic Stop and Reversal (SAR)
 =================================
 
 Type

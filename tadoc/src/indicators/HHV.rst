@@ -1,5 +1,5 @@
 ========================
-HHV (Highest High Value)
+Highest High Value (HHV)
 ========================
 
 Type
