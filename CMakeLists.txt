@@ -22,7 +22,7 @@ OPTION(TA_LIB_ENABLE_EXCEL "Enable Excel bindings" OFF)
 OPTION(TA_LIB_ENABLE_JAVA "Enable Java bindings" ON)
 OPTION(TA_LIB_ENABLE_SWIG "Enable SWIG bindings" OFF)
 OPTION(TA_LIB_ENABLE_TESTS "Enable tests building" ON)
-OPTION(TA_LIB_ENABLE_DOCS "Enable documantations building" ON)
+OPTION(TA_LIB_ENABLE_DOCS "Enable documentations building" ON)
 
 # Packaging 
 
@@ -36,11 +36,11 @@ SET(CPACK_SOURCE_IGNORE_FILES "/CVS/;/\\\\.svn/;\\\\.git/;temp/;\\\\.swp$;\\\\.#
 SET(CPACK_GENERATOR "TGZ;ZIP")
 SET(CPACK_INCLUDE_TOPLEVEL_DIRECTORY OFF)
 
-# try to find package befor download it
+# try to find package before download it
 SET(FETCHCONTENT_TRY_FIND_PACKAGE_MODE "ALWAYS")
 SET(JAVA_SOURCE_VERSION "1.6")
 
-# difine source dir for CMake modules
+# define source directory for CMake modules
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 INCLUDE(CPack)
